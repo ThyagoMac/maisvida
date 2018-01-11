@@ -1,0 +1,29 @@
+<!--
+  Generated template for the ListarMedicosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de Médicos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="cont g-cont">
+    <h2 class="page-header">Desafio MaisVida</h2>
+    <ion-list>
+      <button ion-item *ngFor="let m of medicos" (click)="getMedicoInfo(m.id)">
+        {{ m.name }}
+        <span class="maislista"> {{ m.uname}} </span>
+        <p class="status">
+          <span class="maislista"> Email: {{m.email}} Expecialidade: {{ m.especialidade }} </span>
+          Ativo: {{ m.ativo}} Ocupado: {{m.ocupado}} </p>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>
